@@ -16,6 +16,7 @@ func TestSort(t *testing.T) {
 		in, want []int
 	}{
 		{name: "selection", sort: grokking.SortSelection, in: []int{2, 1, 3, 8, 6}, want: []int{8, 6, 3, 2, 1}},
+		{name: "selection", sort: grokking.Quicksort, in: []int{2, 1, 3, 8, 6}, want: []int{8, 6, 3, 2, 1}},
 	} {
 		t.Run(tt.name, func(t *testing.T) {
 			got, err := tt.sort(tt.in)
